@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính Giá Điện</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 50px;
+      }
+      label,
+      input {
+        display: block;
+        margin: 10px 0;
+      }
+      .result {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tính Giá Điện</h1>
+    <label for="electricityUsage">Số điện tiêu thụ (kWh):</label>
+    <input type="number" id="electricityUsage" min="0" />
+
+    <button onclick="calculateElectricityBill()">Tính tiền điện</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+      function calculateElectricityBill() {
+        const usage = document.getElementById("electricityUsage").value;
+        let bill = 0;
+
+        if (usage <= 50) {
+          bill = usage * 1.678;
+        } else if (usage <= 100) {
+          bill = 50 * 1.678 + (usage - 50) * 1.734;
+        } else if (usage <= 200) {
+          bill = 50 * 1.678 + 50 * 1.734 + (usage - 100) * 2.014;
+        } else if (usage <= 300) {
+          bill = 50 * 1.678 + 50 * 1.734 + 100 * 2.014 + (usage - 200) * 2.536;
+        } else if (usage <= 400) {
+          bill =
+            50 * 1.678 +
+            50 * 1.734 +
+            100 * 2.014 +
+            100 * 2.536 +
+            (usage - 300) * 2.834;
+        } else {
+          bill =
+            50 * 1.678 +
+            50 * 1.734 +
+            100 * 2.014 +
+            100 * 2.536 +
+            100 * 2.834 +
+            (usage - 400) * 2.927;
+        }
+
+        document.getElementById(
+          "result"
+        ).innerText = `Tổng tiền điện: ${bill.toFixed(2)} VND`;
+      }
+    </script>
+  </body>
+</html>
