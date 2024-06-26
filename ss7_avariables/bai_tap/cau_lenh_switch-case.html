@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let choice = Number(
+        prompt(`
+Chọn cách tìm kiếm:
+1. tìm theo tên
+2. tìm theo tác giả
+3. tìm theo nhà xuất bản
+4. tìm theo tiêu đề
+`)
+      );
+
+      switch (choice) {
+        case 1:
+          alert("Bạn đã chọn tìm theo tên");
+          break;
+        case 2:
+          alert("Bạn đã chọn tìm theo tác giả");
+          break;
+        case 3:
+          alert("Bạn đã chọn tìm theo nhà xuất bản");
+          break;
+        case 4:
+          alert("Bạn đã chọn tìm theo tiêu đề");
+          break;
+        default:
+          alert("Lựa chọn không hợp lệ");
+          break;
+      }
+    </script>
+  </body>
+</html>
