@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Luyen_tap_dieu_kien_1_1</title>
+  </head>
+  <body>
+    <script>
+      let edge1 = parseFloat(prompt("Nhập vào a: "));
+      let edge2 = parseFloat(prompt("Nhập vào b: "));
+      if (edge2 !== 0) {
+        if (edge1 % edge2 == 0) {
+          alert(edge1 + " chia hết cho " + edge2);
+        } else {
+          alert(edge1 + " không chia hết cho " + edge2);
+        }
+      } else {
+        alert("b phải khác 0");
+      }
+    </script>
+  </body>
+</html>

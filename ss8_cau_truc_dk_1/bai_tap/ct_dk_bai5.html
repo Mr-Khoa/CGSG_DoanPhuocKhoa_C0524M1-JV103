@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>luyen_tap_cau_truc_dieu_kien_1_5</title>
+  </head>
+  <body>
+    <script>
+      let tx = parseFloat(prompt("Nhập điểm kiểm tra thường xuyên: "));
+      let gk = parseFloat(prompt("Nhập điểm kiểm tra giữa kì: "));
+      let ck = parseFloat(prompt("Nhập điểm kiểm tra cuối: "));
+      let TBM = (tx + gk * 2 + ck * 3) / 6;
+      if (TBM >= 9) {
+        alert("Học sinh xuất sắc");
+      } else if (TBM >= 8.5) {
+        alert("Học sinh giỏi");
+      } else if (TBM >= 6.5) {
+        alert("Học sinh tiên tiến");
+      } else if (TBM >= 5) {
+        alert("Học sinh trung bình");
+      } else {
+        alert("Học sinh kém");
+      }
+    </script>
+  </body>
+</html>

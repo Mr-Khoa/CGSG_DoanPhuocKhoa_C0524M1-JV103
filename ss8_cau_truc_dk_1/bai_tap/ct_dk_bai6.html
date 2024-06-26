@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>luyen_tap_cau_truc_dieu_kien_1_6</title>
+  </head>
+  <body>
+    <script>
+      let money = parseFloat(prompt("Nhập vào doanh thu bán hàng"));
+      let commission = 0;
+      if (money <= 20000000) {
+        commission = (money * 10) / 100;
+      } else if (money <= 40000000) {
+        commission = (money * 20) / 100;
+      } else if (money >= 40000000) {
+        commission = (money * 30) / 100;
+      }
+      alert("Tiền hoa hồng là " + commission);
+    </script>
+  </body>
+</html>
