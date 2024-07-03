@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tổng của 30 số chia hết cho 7 đầu tiên</title>
+  </head>
+  <body>
+    <h1>Tính tổng của 30 số chia hết cho 7 đầu tiên</h1>
+    <p id="result"></p>
+
+    <script>
+      function sumFirst30DivisibleBy7() {
+        let sum = 0;
+        let count = 0;
+        let number = 7; // Bắt đầu từ số 7, số chia hết cho 7 đầu tiên
+
+        while (count < 30) {
+          if (number % 7 === 0) {
+            sum += number;
+            count++;
+          }
+          number += 7; // Tăng thêm 7 mỗi lần để luôn kiểm tra số chia hết cho 7 tiếp theo
+        }
+
+        return sum;
+      }
+
+      const result = sumFirst30DivisibleBy7();
+      document.getElementById(
+        "result"
+      ).innerText = `Tổng của 30 số đầu tiên chia hết cho 7 là: ${result}`;
+    </script>
+  </body>
+</html>
