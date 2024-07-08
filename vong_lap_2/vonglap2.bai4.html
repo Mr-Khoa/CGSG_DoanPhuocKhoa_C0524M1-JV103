@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In hình chữ nhật</title>
+    <style>
+      pre {
+        font-family: monospace;
+        font-size: 16px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>In hình chữ nhật</h1>
+    <button onclick="printRectangle()">In hình chữ nhật</button>
+    <pre id="result"></pre>
+
+    <script>
+      function printRectangle() {
+        const width = 10; // Chiều rộng của hình chữ nhật
+        const height = 5; // Chiều cao của hình chữ nhật
+        let rectangle = "";
+
+        for (let i = 0; i < height; i++) {
+          if (i === 0 || i === height - 1) {
+            rectangle += "*".repeat(width) + "\n"; // Dòng đầu và dòng cuối
+          } else {
+            rectangle += "*" + " ".repeat(width - 2) + "*" + "\n"; // Các dòng ở giữa
+          }
+        }
+
+        document.getElementById("result").innerText = rectangle;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In tam giác vuông</title>
+    <style>
+      pre {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>In tam giác vuông</h1>
+    <button onclick="printTriangle('top-left')">Góc vuông trên trái</button>
+    <button onclick="printTriangle('top-right')">Góc vuông trên phải</button>
+    <button onclick="printTriangle('bottom-left')">Góc vuông dưới trái</button>
+    <button onclick="printTriangle('bottom-right')">Góc vuông dưới phải</button>
+    <pre id="result"></pre>
+
+    <script>
+      function printTriangle(position) {
+        const size = 5; // Kích thước của tam giác
+        let triangle = "";
+
+        if (position === "top-left") {
+          for (let i = size; i > 0; i--) {
+            triangle += "*".repeat(i) + "\n";
+          }
+        } else if (position === "top-right") {
+          for (let i = size; i > 0; i--) {
+            triangle += " ".repeat(size - i) + "*".repeat(i) + "\n";
+          }
+        } else if (position === "bottom-left") {
+          for (let i = 1; i <= size; i++) {
+            triangle += "*".repeat(i) + "\n";
+          }
+        } else if (position === "bottom-right") {
+          for (let i = 1; i <= size; i++) {
+            triangle += " ".repeat(size - i) + "*".repeat(i) + "\n";
+          }
+        }
+
+        document.getElementById("result").innerText = triangle;
+      }
+    </script>
+  </body>
+</html>

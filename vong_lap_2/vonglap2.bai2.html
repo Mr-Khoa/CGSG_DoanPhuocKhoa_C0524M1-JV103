@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính giai thừa</title>
+  </head>
+  <body>
+    <h1>Tính giai thừa của một số nguyên dương</h1>
+    <input
+      type="number"
+      id="number"
+      min="0"
+      placeholder="Nhập số nguyên dương"
+    />
+    <button onclick="calculateFactorial()">Tính giai thừa</button>
+    <p id="result"></p>
+
+    <script>
+      function calculateFactorial() {
+        const number = parseInt(document.getElementById("number").value);
+        if (isNaN(number) || number < 0) {
+          alert("Vui lòng nhập một số nguyên dương hợp lệ.");
+          return;
+        }
+        let result = 1;
+        for (let i = 2; i <= number; i++) {
+          result *= i;
+        }
+        document.getElementById(
+          "result"
+        ).innerText = `Giai thừa của ${number} là: ${result}`;
+      }
+    </script>
+  </body>
+</html>
