@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khởi tạo mảng số nguyên a và b gồm 10 phần tử
+      let a = [3, 15, 7, 12, 9, 20, 11, 8, 5, 14];
+      let b = [1, 4, 6, 10, 2, 19, 13, 17, 18, 16];
+
+      // Khai báo mảng c với 20 phần tử (đủ để chứa cả a và b)
+      let c = new Array(20);
+
+      // Nối mảng a và b vào mảng c
+      c = a.concat(b);
+
+      // Hiển thị mảng c
+      console.log("Mảng c sau khi nối từ a và b:");
+      console.log(c);
+    </script>
+  </body>
+</html>

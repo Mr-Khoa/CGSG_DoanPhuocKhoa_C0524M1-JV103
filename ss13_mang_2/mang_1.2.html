@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khởi tạo mảng số nguyên gồm 10 phần tử khác nhau
+      let numbers = [3, 15, 7, 12, 9, 20, 11, 8, 5, 14];
+
+      // Hàm tìm phần tử có giá trị lớn nhất và vị trí của nó
+      function findMaxAndIndex(arr) {
+        let max = arr[0];
+        let index = 0;
+
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] > max) {
+            max = arr[i];
+            index = i;
+          }
+        }
+
+        return { maxValue: max, maxIndex: index };
+      }
+
+      // Gọi hàm và hiển thị kết quả
+      let result = findMaxAndIndex(numbers);
+      console.log("Phần tử có giá trị lớn nhất là: " + result.maxValue); // Phần tử có giá trị lớn nhất là: 20
+      console.log("Vị trí của phần tử đó trong mảng là: " + result.maxIndex); // Vị trí của phần tử đó trong mảng là: 5
+    </script>
+  </body>
+</html>

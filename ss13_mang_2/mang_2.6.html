@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Nhập vào một mảng ký tự từ người dùng
+      let characters = prompt(
+        "Nhập vào một mảng ký tự, phân tách bởi dấu cách:"
+      ).split(" ");
+
+      // Duyệt qua từng phần tử của mảng và thay thế các ký tự "-"
+      for (let i = 0; i < characters.length; i++) {
+        if (characters[i] === "-") {
+          characters[i] = "_";
+        }
+      }
+
+      // Hiển thị mảng ký tự sau khi thay thế
+      console.log("Mảng ký tự sau khi thay thế:");
+      console.log(characters.join(" "));
+    </script>
+  </body>
+</html>

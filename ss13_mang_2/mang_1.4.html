@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khởi tạo một mảng số nguyên
+      let numbers = [3, 15, 7, 12, 9, 20, 11, 8, 5, 14];
+
+      // Hàm đảo ngược các phần tử trong mảng
+      function reverseArray(arr) {
+        let reversedArr = [];
+        for (let i = arr.length - 1; i >= 0; i--) {
+          reversedArr.push(arr[i]);
+        }
+        return reversedArr;
+      }
+
+      // Gọi hàm và hiển thị kết quả
+      let reversedNumbers = reverseArray(numbers);
+      console.log("Mảng sau khi đảo ngược: " + reversedNumbers); // Mảng sau khi đảo ngược: 14,5,8,11,20,9,12,7,15,3
+    </script>
+  </body>
+</html>

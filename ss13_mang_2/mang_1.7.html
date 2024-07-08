@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khởi tạo một mảng số nguyên gồm 10 phần tử
+      let numbers = [3, 15, 7, 12, 9, 20, 11, 8, 5, 14];
+
+      // Nhập giá trị phần tử số nguyên V
+      let V = 12;
+
+      // Hàm kiểm tra và xoá phần tử V khỏi mảng
+      function removeValueFromArray(arr, value) {
+        let index = arr.indexOf(value);
+        if (index !== -1) {
+          // Dịch các phần tử bên phải V sang vị trí của V
+          for (let i = index; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+          }
+          // Gán giá trị 0 cho phần tử cuối cùng của mảng
+          arr[arr.length - 1] = 0;
+          return true;
+        }
+        return false;
+      }
+
+      // Gọi hàm và hiển thị kết quả
+      if (removeValueFromArray(numbers, V)) {
+        console.log(V + " was in the array and has been removed.");
+        console.log("Updated array: " + numbers);
+      } else {
+        console.log(V + " is not in the array.");
+      }
+    </script>
+  </body>
+</html>

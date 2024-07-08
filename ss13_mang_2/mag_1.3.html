@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khởi tạo mảng số nguyên
+      let numbers = [3, 15, 7, 12, 9, 20, 11, 8, 5, 14];
+
+      // Hàm tìm phần tử có giá trị lớn nhất
+      function findMax(arr) {
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] > max) {
+            max = arr[i];
+          }
+        }
+        return max;
+      }
+
+      // Hàm tính giá trị trung bình của các phần tử trong mảng
+      function calculateAverage(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum / arr.length;
+      }
+
+      // Gọi hàm và hiển thị kết quả
+      let maxValue = findMax(numbers);
+      let averageValue = calculateAverage(numbers);
+
+      console.log("Phần tử có giá trị lớn nhất trong mảng là: " + maxValue); // Phần tử có giá trị lớn nhất trong mảng là: 20
+      console.log(
+        "Giá trị trung bình của các phần tử trong mảng là: " + averageValue
+      ); // Giá trị trung bình của các phần tử trong mảng là: 10.4
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khai báo mảng ký tự và kích thước của mảng
+      let characters = ["a", "2", "c", "5", "7", "d", "1"];
+      let size = characters.length;
+
+      // Biến đếm số ký tự số
+      let digitCount = 0;
+
+      // Duyệt qua từng phần tử của mảng và đếm số ký tự số
+      for (let i = 0; i < size; i++) {
+        // Sử dụng isNaN để kiểm tra xem ký tự có phải là số không
+        if (!isNaN(characters[i])) {
+          digitCount++;
+        }
+      }
+
+      // Hiển thị kết quả đếm số ký tự số
+      console.log("Số ký tự số trong mảng là: " + digitCount);
+    </script>
+  </body>
+</html>

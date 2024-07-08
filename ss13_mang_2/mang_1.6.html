@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khởi tạo một mảng số nguyên gồm 10 phần tử
+      let numbers = [3, 15, 7, 12, 9, 20, 11, 8, 5, 14];
+
+      // Nhập giá trị phần tử số nguyên V
+      let V = 12;
+
+      // Hàm kiểm tra xem V có nằm trong mảng không
+      function isValueInArray(arr, value) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === value) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      // Gọi hàm và hiển thị kết quả
+      if (isValueInArray(numbers, V)) {
+        console.log(V + " is in the array");
+      } else {
+        console.log(V + " is not in the array");
+      }
+    </script>
+  </body>
+</html>
